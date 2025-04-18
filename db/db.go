@@ -1,6 +1,10 @@
 package db
 
-import "database/sql"
+import (
+	"database/sql"
+
+	_ "github.com/lib/pq"
+)
 
 func NewPostgresSQL(conn string) (*sql.DB, error) {
 	// Initialize a new PostgresDB instance
